@@ -68,49 +68,32 @@
                             </Button.Style>
                             <Button.Content>
                                 <Grid>
-                                    <TextBlock Theme:Brush.Foreground="{Binding (Theme:Brush.Foreground), RelativeSource={RelativeSource AncestorType=Button}}"
-                                               FontSize="{DynamicResource Mutable_DeviceVolumeTextFontSize}"
-                                               Opacity="0.4">
-                                        <TextBlock.Style>
-                                            <Style BasedOn="{StaticResource GlyphTextBlockStyle}" TargetType="{x:Type TextBlock}">
-                                                <Setter Property="Text" Value="&#xE995;" />
+                                    <Image>
+                                        <Image.Style>
+                                            <Style TargetType="{x:Type Image}">
                                                 <Style.Triggers>
                                                     <DataTrigger Binding="{Binding Device.IconKind}" Value="Mute">
-                                                        <Setter Property="Text" Value="&#xE74F;" />
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource MuteIconDark}}" />
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Device.IconKind}" Value="Microphone">
-                                                        <Setter Property="Text" Value="&#xE720;" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Theme:Brush.Foreground="{Binding (Theme:Brush.Foreground), RelativeSource={RelativeSource AncestorType=Button}}" FontSize="{DynamicResource Mutable_DeviceVolumeTextFontSize}">
-                                        <TextBlock.Style>
-                                            <Style BasedOn="{StaticResource GlyphTextBlockStyle}" TargetType="{x:Type TextBlock}">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Mute">
-                                                        <Setter Property="Text" Value="&#xE74F;" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Microphone">
-                                                        <Setter Property="Text" Value="&#xE720;" />
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource MicIconDark}}" />
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar0">
-                                                        <Setter Property="Text" Value="&#xE992;" />
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource ZeroIconDark}}" />
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar1">
-                                                        <Setter Property="Text" Value="&#xE993;" />
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource LowIconDark}}" />
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar2">
-                                                        <Setter Property="Text" Value="&#xE994;" />
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource MediumIconDark}}" />
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar3">
-                                                        <Setter Property="Text" Value="&#xE995;" />
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource HighIconDark}}" />
                                                     </DataTrigger>
                                                 </Style.Triggers>
                                             </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
+                                        </Image.Style>
+                                    </Image>
                                 </Grid>
                             </Button.Content>
                         </Button>

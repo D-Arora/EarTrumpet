@@ -14,11 +14,23 @@ namespace EarTrumpet.Interop
             NoDevice = 125,
         }
 
-        private static readonly string DllPath = Environment.ExpandEnvironmentVariables(@"%SystemRoot%\System32\SndVolSSO.dll");
-
         public static string GetPath(IconId icon)
         {
-            return $"{DllPath},{(int)icon}";
+            switch (icon)
+            {
+                case IconId.Muted:
+                    return (string)App.Current.Resources["MuteIconDark"];
+                case IconId.SpeakerZeroBars:
+                    return (string)App.Current.Resources["ZeroIconDark"];
+                case IconId.SpeakerOneBar:
+                    return (string)App.Current.Resources["LowIconDark"];
+                case IconId.SpeakerTwoBars:
+                    return (string)App.Current.Resources["MediumIconDark"];
+                case IconId.SpeakerThreeBars:
+                    return (string)App.Current.Resources["HighIconDark"];
+                default:
+                    return (string)App.Current.Resources["NoneIconDark"];
+            }
         }
     }
 }

@@ -115,6 +115,24 @@
 
             <bcl:String x:Key="EarTrumpetIconLight">pack://application:,,,/EarTrumpet;component/Assets/Icon-Light.ico</bcl:String>
             <bcl:String x:Key="EarTrumpetIconDark">pack://application:,,,/EarTrumpet;component/Assets/Icon-Dark.ico</bcl:String>
+            
+            <!-- Windows 11 Light Audio Icons -->
+            <bcl:String x:Key="MicIconLight">pack://application:,,,/EarTrumpet;component/Assets/Mic-Light.ico</bcl:String>
+            <bcl:String x:Key="NoneIconLight">pack://application:,,,/EarTrumpet;component/Assets/None-Light.ico</bcl:String>
+            <bcl:String x:Key="MuteIconLight">pack://application:,,,/EarTrumpet;component/Assets/Mute-Light.ico</bcl:String>
+            <bcl:String x:Key="ZeroIconLight">pack://application:,,,/EarTrumpet;component/Assets/Zero-Light.ico</bcl:String>
+            <bcl:String x:Key="LowIconLight">pack://application:,,,/EarTrumpet;component/Assets/Low-Light.ico</bcl:String>
+            <bcl:String x:Key="MediumIconLight">pack://application:,,,/EarTrumpet;component/Assets/Medium-Light.ico</bcl:String>
+            <bcl:String x:Key="HighIconLight">pack://application:,,,/EarTrumpet;component/Assets/High-Light.ico</bcl:String>
+
+            <!-- Windows 11 Dark Audio Icons -->
+            <bcl:String x:Key="MicIconDark">pack://application:,,,/EarTrumpet;component/Assets/Mic-Dark.ico</bcl:String>
+            <bcl:String x:Key="NoneIconDark">pack://application:,,,/EarTrumpet;component/Assets/None-Dark.ico</bcl:String>
+            <bcl:String x:Key="MuteIconDark">pack://application:,,,/EarTrumpet;component/Assets/Mute-Dark.ico</bcl:String>
+            <bcl:String x:Key="ZeroIconDark">pack://application:,,,/EarTrumpet;component/Assets/Zero-Dark.ico</bcl:String>
+            <bcl:String x:Key="LowIconDark">pack://application:,,,/EarTrumpet;component/Assets/Low-Dark.ico</bcl:String>
+            <bcl:String x:Key="MediumIconDark">pack://application:,,,/EarTrumpet;component/Assets/Medium-Dark.ico</bcl:String>
+            <bcl:String x:Key="HighIconDark">pack://application:,,,/EarTrumpet;component/Assets/High-Dark.ico</bcl:String>
 
             <Style x:Key="Windows10FocusVisualStyle">
                 <Setter Property="Control.Template">

@@ -72,11 +72,7 @@
                     </Style>
                 </Button.Style>
                 <Button.Content>
-                    <TextBlock Theme:Brush.Foreground="{Binding (Theme:Brush.Foreground), RelativeSource={RelativeSource AncestorType=Button}}"
-                               FontSize="{DynamicResource Mutable_DeviceVolumeTextFontSize}"
-                               Opacity="0.8"
-                               Style="{StaticResource GlyphTextBlockStyle}"
-                               Text="&#xE74F;" />
+                    <Image Source="{Binding Source={StaticResource MuteIconDark}}"/>
                 </Button.Content>
             </Button>
         </Grid>
