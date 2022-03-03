@@ -72,24 +72,95 @@
                                         <Image.Style>
                                             <Style TargetType="{x:Type Image}">
                                                 <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Mute">
+                                                    <!-- Dark Icons for Light Mode -->
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="True"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Mute"/>  
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Source" Value="{Binding Source={StaticResource MuteIconDark}}" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Microphone">
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="True"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Microphone"/>  
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Source" Value="{Binding Source={StaticResource MicIconDark}}" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar0">
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="True"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar0"/>  
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Source" Value="{Binding Source={StaticResource ZeroIconDark}}" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar1">
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="True"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar1"/>  
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Source" Value="{Binding Source={StaticResource LowIconDark}}" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar2">
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="True"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar2"/>  
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Source" Value="{Binding Source={StaticResource MediumIconDark}}" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Device.IconKind}" Value="Bar3">
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="True"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar3"/>  
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Source" Value="{Binding Source={StaticResource HighIconDark}}" />
-                                                    </DataTrigger>
+                                                    </MultiDataTrigger>
+                                                    <!-- Dark Icons for Light Mode -->
+
+                                                    <!-- Light Icons for Dark Mode -->
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="False"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Mute"/>  
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource MuteIconLight}}" />
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="False"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Microphone"/>  
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource MicIconLight}}" />
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="False"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar0"/>  
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource ZeroIconLight}}" />
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="False"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar1"/>  
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource LowIconLight}}" />
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="False"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar2"/>  
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource MediumIconLight}}" />
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Source={StaticResource ThemeManager}, Path=IsSystemLightTheme}" Value="False"/>
+                                                            <Condition Binding="{Binding Device.IconKind}" Value="Bar3"/>  
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Source" Value="{Binding Source={StaticResource HighIconLight}}" />
+                                                    </MultiDataTrigger>
+                                                    <!-- Light Icons for Dark Mode -->
                                                 </Style.Triggers>
                                             </Style>
                                         </Image.Style>

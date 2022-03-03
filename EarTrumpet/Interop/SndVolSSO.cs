@@ -1,4 +1,4 @@
-﻿using System;
+﻿using EarTrumpet.DataModel;
 
 namespace EarTrumpet.Interop
 {
@@ -16,20 +16,27 @@ namespace EarTrumpet.Interop
 
         public static string GetPath(IconId icon)
         {
+            string iconset = "Light";
+
+            if (SystemSettings.IsSystemLightTheme)
+            {
+                iconset = "Dark";
+            }
+
             switch (icon)
             {
                 case IconId.Muted:
-                    return (string)App.Current.Resources["MuteIconDark"];
+                    return (string)App.Current.Resources[$"MuteIcon{iconset}"];
                 case IconId.SpeakerZeroBars:
-                    return (string)App.Current.Resources["ZeroIconDark"];
+                    return (string)App.Current.Resources[$"ZeroIcon{iconset}"];
                 case IconId.SpeakerOneBar:
-                    return (string)App.Current.Resources["LowIconDark"];
+                    return (string)App.Current.Resources[$"LowIcon{iconset}"];
                 case IconId.SpeakerTwoBars:
-                    return (string)App.Current.Resources["MediumIconDark"];
+                    return (string)App.Current.Resources[$"MediumIcon{iconset}"];
                 case IconId.SpeakerThreeBars:
-                    return (string)App.Current.Resources["HighIconDark"];
+                    return (string)App.Current.Resources[$"HighIcon{iconset}"];
                 default:
-                    return (string)App.Current.Resources["NoneIconDark"];
+                    return (string)App.Current.Resources[$"NoneIcon{iconset}"];
             }
         }
     }
